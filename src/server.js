@@ -16,7 +16,9 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      process.env.CLIENT_URL || "https://tic-tac-toe-front-end-pi.vercel.app",
+      process.env.CLIENT_URL ||
+        "http://localhost:3000" ||
+        "https://tic-tac-toe-front-end-pi.vercel.app",
     ], // use env var for flexibility
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
